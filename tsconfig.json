@@ -1,0 +1,10 @@
+/** also see https://www.totaltypescript.com/tsconfig-cheat-sheet */
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@onlywatch/tsconfigs/strictest",
+  "compilerOptions": {
+    "baseUrl": "./src",
+  },
+  "include": ["src", "*.config.*"],
+  "exclude": ["node_modules"]
+}
