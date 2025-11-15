@@ -1,5 +1,9 @@
 # 🤣 oh-my-typescript-zsh
 
+## Preview
+
+![preview](./public/screenshot.png)
+
 ## Usage
 
 > [!TIP]
@@ -53,5 +57,3 @@ tsx /Users/{username}/git/oh-my-typescript-zsh/src/templates/showGlobalPackagesV
 ```sh
 source ~/.zshrc
 ```
-
-![preview](./public/screenshot-U1lYSiOG--2025-10-10--02-32-52.png)

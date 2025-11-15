@@ -8,8 +8,9 @@ import { turbo } from '../runtime-info/turbo'
 import { tsx } from '../runtime-info/tsx'
 import type { RuntimeInfo } from '../types/RuntimeInfo'
 import { pnpm } from '../runtime-info/pnpm'
+import { podman } from '../runtime-info/podman'
 
-const infoSet = new Set((await Promise.all([shell, nodejs, git, pnpm, tsx, turbo])).map(format))
+const infoSet = new Set((await Promise.all([podman, shell, nodejs, git, pnpm, tsx, turbo])).map(format))
 
 echo(
   dedent(`
@@ -21,7 +22,7 @@ echo(
 
 function format(info: RuntimeInfo) {
   const emoji = info.emoji ? info.emoji.padEnd(2) : 'ℹ️'
-  const name = info.name ? info.name.padEnd(5) : ''
+  const name = info.name ? info.name.padEnd(6) : ''
   const value = info.value ? info.value.padEnd(10) : ''
   const version = info.version ? `@ v${info.version}` : ''
 
